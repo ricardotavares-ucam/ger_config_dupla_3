@@ -1,20 +1,30 @@
 class Veterinario:
 
-    def __init__(self, nome_vet, endereco_vet, tel_vet):
-        self._nome_vet = nome_vet
-        self._endereco_vet = endereco_vet
-        self._tel_vet = tel_vet
+    def __init__(self, **kwargs):
+        self._nome = kwargs['nome']
+        self._endereco = kwargs['endereco']
+        self._numero_tel = kwargs['numero_tel']
 
-        def get_nome_vet(self):
-            return self._nome_vet
-        def get_endereco_vet(self):
-            return self._endereco_vet
-        def get_tel_vet(self):
-            return self._tel_vet
-        
-        def set_nome_vet(self, nome_vet):
-            self._nome_vet = nome_vet
-        def set_endereco_vet(self, endereco_vet):
-            self._endereco_vet = endereco_vet
-        def set_tel_vet(self, tel_vet):
-            self._tel_vet = tel_vet
+    @property
+    def nome(self):
+        return self._nome
+    
+    @nome.setter
+    def nome(self, nome):
+        self._nome = nome
+
+    @property
+    def endereco(self):
+        return self._endereco
+    
+    @endereco.setter
+    def endereco(self,endereco):
+        self._endereco = endereco
+
+    @property
+    def numero_tel(self):
+        return self._numero_tel
+    
+    @numero_tel.setter
+    def numero_tel(self, numero_tel):
+        self._numero_tel = numero_tel
